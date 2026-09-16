@@ -5,3 +5,11 @@ resource "azurerm_virtual_network" "name" {
     location = "eastus"
   
 }
+
+resource "azurerm_subnet" "subnet" {
+    name = "subnet01"
+    address_prefixes = ["10.1.1.0/24"]
+    resource_group_name = "rg"
+    virtual_network_name = azurerm_virtual_network.name.name
+  
+}
