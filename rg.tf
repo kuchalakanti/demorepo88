@@ -3,6 +3,7 @@ resource "azurerm_resource_group" "rg" {
     location = "eastus"
     tags = {
       Name = "krishna"
+      env = "dev-env"
     }
   
 }
